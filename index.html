@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Add to home screen for iOS -->
+<meta name="apple-mobile-web-app-title" content="苹果玩机Box">
+<link rel="apple-touch-icon" href="https://47.92.213.185:41509/download?filename=/www/wwwroot/box.txsm.asia/5993fdd654bc5d767d28a398ccdf8859.png">
+<link rel="icon" href="https://47.92.213.185:41509/download?filename=/www/wwwroot/box.txsm.asia/5993fdd654bc5d767d28a398ccdf8859.png" type="image/png">
+<title>苹果实验室</title>
+<style>
+
+
+   
+    body { margin: 0; font-family: 'Arial', sans-serif; background: #f4f4f4; }
+    .header, .footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+    }
+    .content { padding: 2px 5px; }
+    .card {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        margin-bottom: 0px;
+        padding: 0px 8px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .card img {
+        width: 80px; /* You can adjust the size */
+        height: 80px; /* Make sure this is the same as the width for a circle */
+        border-radius: 10%;
+        margin-right: 15px;
+        object-fit: cover;
+    }
+    .navigation {
+        display: flex;
+        justify-content: space-around;
+  margin-top: 2px;
+        padding: 10px;
+  border-radius: 8px;
+  background-color: #ffffff;
+    }
+    .navigation a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    .navigation a:hover {
+        background-color: #ddd; /* 鼠标悬停时的背景色 */
+    }
+    .card-text {
+        flex: 1;
+    }
+    .footer {
+        background-color: #ddd;
+        color: #333;
+    }
+</style>
+</head>
+<body>
+    <div id="modal" class="modal">
+    <div class="modal-content">
+        <img src="https://yksv.cn/wp-content/uploads/2024/05/ewm-1-e1717155771748.png" alt="公众号二维码" style="width: 200px; height: 200px; margin-bottom: 5px;">
+        <h2 style="text-align: center;">关注公众号发送验证码获取密码<br>微信公众号：苹果实验室</h2>
+        <span class="close">请输入公众号发给您的密码</span>
+        <input type="password" id="passwordInput" style="width: 200px; height: 40px; font-size: 18px;">
+        <p style="color: white; margin-top: 10px;">请务必准确输入密码</p>
+        <button style="background-color: #4CAF50; color: white; width: 150px; height: 50px; font-size: 20px; margin-top: 20px;" onclick="checkPassword()">确定</button>
+    </div>
+</div>
+
+<script>
+    // 默认为 true 表示弹窗弹出，false 则不弹出
+    let enablePasswordCheck = false;
+
+    function showModal() {
+        if (enablePasswordCheck) {
+            document.getElementById('modal').style.display = 'block';
+            document.body.classList.add('body-lock');
+        }
+    }
+
+    function checkPassword() {
+        const password = document.getElementById('passwordInput').value;
+        if (password === '9527') {
+            document.getElementById('modal').style.display = 'none';
+            document.body.classList.remove('body-lock');
+        } else {
+            alert('密码错误，请重新输入');
+        }
+    }
+
+    window.onload = showModal;
+</script>
+
+<style>
+    /* 新增密码验证弹窗样式 */
+.modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+.modal-content {
+        background-color: #4CAF50;
+        color: white;
+        margin: 20% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+.close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+.close:hover,
+.close:focus {
+        color: #ddd;
+        text-decoration: none;
+    }
+
+    /* 禁止滚动的样式 */
+.body-lock {
+        overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+   .modal-content {
+            margin: 30% auto;
+            width: 90%;
+        }
+    }
+</style>
+
+<div class="header" style="background-color: #008000; padding: 15px; border-radius: 10px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); display: flex; justify-content: center; align-items: center; flex-direction: column;">
+    <h2 style="color: white; font-size: 24px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">苹果实验室 分享精品IPA</h2>
+    <p style="color: #ddd; font-size: 14px; margin-top: 5px; font-style: italic;">在这里，发现苹果设备的无限可能</p>
+    <img src="https://yksv.cn/wp-content/uploads/2024/07/5993fdd654bc5d767d28a398ccdf8859.png" style="width: 30px; height: 30px; margin-top: 5px;" alt="Apple Icon">
+</div>
+
+     <div class="category-label" style="padding: 15px 15px; background-color: #008000; color: white; font-size: 22px; font-weight: bold; border-radius: 20px; margin-bottom: 0px; margin-top: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); text-align: left; width: fit-content;">官方交流群</div>
+
+<a href="https://qm.qq.com/q/x6Z2bKpM8o" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/WechatIMG174.jpg" alt="Person">
+        <div class="card-text">
+            <h3>QQ交流群（点击即可进入）
+<br><span style="color: green;">有不懂不会的可进群解疑</span></h3>
+            <p>进群请遵守相应群规！<span style="color: green;">（目前未满员）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://qm.qq.com/q/vmr7j1HCHC" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/WechatIMG174.jpg" alt="Person">
+        <div class="card-text">
+            <h3>QQ交流群2群（点击即可进入）
+<br><span style="color: green;">一样，有问题进群问</span></h3>
+            <p>进群请遵守相应群规！<span style="color: green;">（目前未满员）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://box.txsm.asia/jc/wechatgroup.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/20190223012801-450496618_jpeg_480_480_61352.jpg" alt="Person">
+        <div class="card-text">
+            <h3>微信交流群（点击跳转进入）
+<br><span style="color: green;">可进群解疑</span></h3>
+            <p>进群请遵守相应群规！<span style="color: green;">（目前未满员）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://pan.yksv.cn/" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/08/13367076999045167.png" alt="Person">
+        <div class="card-text">
+            <h3>苹果实验室资源站</h3>
+            <p>常用的IPA安装包，未签名，使用TrollStore安装！<span style="color: green;">在线直接下载就能用！</span></p>
+        </div>
+    </div>
+</div>
+</a>
+    <!-- 其他内容保持不变 -->
+
+<div class="category-label" style="padding: 15px 15px; background-color: #008000; color: white; font-size: 22px; font-weight: bold; border-radius: 20px; margin-bottom: 0px; margin-top: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); text-align: left; width: fit-content;">巨魔在线安装</div>
+
+<a href="https://www.lanzouj.com/imc42277250j" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/trollinstallerx.jpg" alt="Person">
+        <div class="card-text">
+            <h3>TrollInstallerX（在线安装）<br><span style="color: green;">证书有效 点击在线安装！</span></h3>
+            <p>注意:因网络延迟，点击后请稍等一会！<span style="color: green;">（无需网络即可成功！具体安装后的教程请点击下方的“TrollInstallerX（官方原版）中查看！”）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://www.lanzouj.com/iRMdN275wori" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://aiweb.aifengkeji.com/chajian/30e0bc65-caea-4954-a70e-be22a7036580.jpeg" alt="Person">
+        <div class="card-text">
+            <h3>TrollStar（在线安装）<br><span style="color: green;">证书有效 点击在线安装！</span></h3>
+            <p>注意:因网络延迟，点击后请稍等一会！<span style="color: green;">（用于安装 trollstore 巨魔工具,上面那个不行的16系统用户可以试试这个！”）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+
+<a href="https://api.jailbreaks.app/troll64e" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/WechatIMG202.jpg" alt="Person">
+        <div class="card-text">
+            <h3>TrollStore（官方原版）<br><span style="color: blue;">iOS 15.5 - 15.6.1 </span></h3>
+            <p>支持在线安装！<span style="color: green;">（ 适用于A12-A15处理器 iOS 15.5 - 15.6.1 需要特殊网络下载kernelcache文件！）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://api.jailbreaks.app/troll64e" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/WechatIMG205.jpg" alt="Person">
+        <div class="card-text">
+            <h3>TrollStore（官方原版）<br><span style="color: blue;">iOS 14.0 - 15.4.1 </span></h3>
+            <p>支持在线安装！<span style="color: green;">（ 适用于A12-A15处理器 iOS 14.0 - 15.4.1 ）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://api.jailbreaks.app/troll" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/WechatIMG201.jpg" alt="Person">
+        <div class="card-text">
+            <h3>TrollStore（官方原版）<br><span style="color: blue;">iOS 14.0 - 15.6.1 </span></h3>
+            <p>支持在线安装！<span style="color: green;">（ 适用于A8-A11处理器 iOS 14.0 - 15.4.1 ）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<div class="category-label" style="padding: 12px 12px; background-color: #008000; color: white; font-size: 22px; font-weight: bold; border-radius: 20px; margin-bottom: 0px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); text-align: left; width: fit-content;">巨魔工具及玩法</div>
+
+<a href="https://box.txsm.asia/jc/trollnstallerx.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/trollinstallerx.jpg" alt="Person">
+        <div class="card-text">
+            <h3>TrollInstallerX（官方原版）<br><span style="color: blue;">iOS 14.0 - 16.6.1 </span></h3>
+            <p>支持证书签名安装!<span style="color: red;">（ iOS 16.2 - 16.6.1 和 iOS 15.7.2 - 15.8.2 需要特殊网络下载kernelcache文件！）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+
+<a href="https://box.txsm.asia/jc/trollnonce.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://aiweb.aifengkeji.com/chajian/cc0590f0-69e8-4d91-adff-0dd37695cbc8.jpeg" alt="Person">
+        <div class="card-text">
+            <h3>TrollNonce（固定G值）
+<br><span style="color: blue;">iOS 15.0 - 15.1.1 / iOS 15.2 - iOS 15.5 b4</span></h3>
+            <p>iOS 15.0 - iOS 16.5<span style="color: green;">（ 可固定G值，利用SHSH2降级系统）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://box.txsm.asia/jc/superIcons.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/08/4cb660ac-39b4-40ab-8b91-bfef1f5d0dea.jpg" alt="Person">
+        <div class="card-text">
+            <h3>SuperIcons（更换图标）
+<br><span style="color: blue;">iOS 14.0-16.6.1和 17.0</span></h3>
+            <p>需通过Trollstore安装<span style="color: green;">（可以更换已安装应用图标）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://box.txsm.asia/jc/batteried.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/7a7e25164dc2492168877f320c32fc4.jpg" alt="Person">
+        <div class="card-text">
+            <h3>Batteried(看老婆在电池上摇摆)
+<br><span style="color: blue;">iOS 14.0-16.6.1和 17.0</span></h3>
+            <p>需通过Trollstore安装<span style="color: green;">（悬浮显示 GIF 图片在电池上）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://box.txsm.asia/jc/trollfools.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://aiweb.aifengkeji.com/chajian/79334428-dc2d-4413-b858-493028512074.png" alt="Person">
+        <div class="card-text">
+            <h3>TrollFools（应用注入）
+<br><span style="color: blue;">iOS 14.0-16.6.1</span></h3>
+            <p>需通过Trollstore安装<span style="color: green;">（可以直接在App Store下载的应用里面注入插件，没有权限丢失的情况！）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://box.txsm.asia/jc/filzax.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/0d589e6c-db6c-4fda-bf51-4738c95a03cc.jpg" alt="Person">
+        <div class="card-text">
+            <h3>Filza（完整版）<br><span style="color: blue;">iOS 14.0 - iOS 16.6.1 和 17.0</span></h3>
+            <p>需通过Trollstore安装<span style="color: green;">（ 激活显示完整版）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://box.txsm.asia/jc/helium.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/d8797817-ad94-4a12-88f1-b4fa5b00aa02.jpg" alt="Person">
+        <div class="card-text">
+            <h3>Helium（状态栏）<br><span style="color: blue;">iOS 15.0 - 16.6.1 和 17.0 </span></h3>
+            <p>需要通过 trollstore 巨魔安装，才能使用<span style="color: green;">（ 设置你要的状态栏信息，然后到 Home 页面开启 Enable HUD 即可。）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://box.txsm.asia//jc/trollRecorder.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/trollrecorder.jpg" alt="Person">
+        <div class="card-text">
+            <h3>通话录音（免费版）<br><span style="color: blue;">iOS 14.0 - iOS 16.6.1 和 17.0</span></h3>
+            <p>点击下载压缩包到本地，解压后使用巨魔安装生效！<span style="color: red;">（证书签名方式无权限！）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://box.txsm.asia/jc/callassist.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/7f39d1eb-4a3f-4b03-b040-6a961804beea.jpg" alt="Person">
+        <div class="card-text">
+            <h3>CallAssist（电话助手）<br><span style="color: blue;">iOS 14.0 - iOS 16.6.1 和 17.0 </span></h3>
+            <p>需要通过 trollstore 巨魔安装，才能使用<span style="color: green;">（ 功能有：键盘T9拨号、归属地显示、双卡选择、通话记录、颜色标识）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://box.txsm.asia/jc/dynamiccowts.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/f1914fdd-fe00-4288-bdd7-fb207f34f8f0.jpg" alt="Person">
+        <div class="card-text">
+            <h3>DynamicCow（灵动岛）<br><span style="color: blue;">iOS 16.0 - 16.6.1 和 17.0 </span></h3>
+            <p>需要通过 trollstore 巨魔安装，才能使用<span style="color: green;">（ 一键开启灵动岛，不支持iOS15。）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://box.txsm.asia/jc/appsmanager.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://aiweb.aifengkeji.com/chajian/ee180098-f108-4bd4-89c4-d07606f14275.jpeg" alt="Person">
+        <div class="card-text">
+            <h3>AppsManager（备份数据）
+<br><span style="color: blue;">iOS 16.0 - iOS 16.6.1</span></h3>
+            <p>iOS 15.0 - iOS 16.5<span style="color: green;">（ 备份App数据）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://box.txsm.asia/jc/mugunghwa.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://aiweb.aifengkeji.com/chajian/1dc2820d-a78d-4d80-87bf-ec43e1055c66.jpeg" alt="Person">
+        <div class="card-text">
+            <h3>Mugunghwa（改全面屏）
+<br><span style="color: blue;">iOS 15.0 - iOS 15.4.1</span></h3>
+            <p>A10 - A13<span style="color: green;">（ 可改全面屏手势、改角标、美化锁屏密码）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+
+<a href="https://box.txsm.asia/jc/trollleds.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/6829c118-6f7c-4f94-ae7a-89a9ebb4a983-1.png" alt="Person">
+        <div class="card-text">
+            <h3>TrollLEDs（手电筒）<br><span style="color: blue;">iOS 14.0 至 16.6.1 和 17.0 </span></h3>
+            <p>需要通过 trollstore 巨魔安装，才能使用<span style="color: green;">（ 可以对闪光灯颜色调整，白色和暖色）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+
+<a href="https://box.txsm.asia/jc/trollspeed.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/714dd4bd-1892-430b-a138-1cc9efb9a5ae.jpg" alt="Person">
+        <div class="card-text">
+            <h3>TrollSpeed（网速浮窗）<br><span style="color: blue;">iOS 14.0 - iOS 16.6.1 和 17.0</span></h3>
+            <p>需要通过 trollstore 安装<span style="color: red;">（ 证书签名方式无权限！）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://ipcc.lanzouj.com/s/aemulo"  style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/aemulo.jpg" alt="Person">
+        <div class="card-text">
+            <h3>Aemulo门禁模拟<br><span style="color: blue;">iOS 14.0 - iOS 16.6.1 和 17.0</span></h3>
+            <p>需要通过 trollstore 巨魔安装，才能使用<span style="color: red;">（证书签名方式无权限！）</span></p>
+   <p></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://ipcc.lanzouj.com/s/ipcc"  style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/ipccreplacer.jpg" alt="Person">
+        <div class="card-text">
+            <h3>IPCC Replacer巨魔版<br><span style="color: blue;">iOS 14.0 - iOS 16.6.1 和 17.0</span></h3>
+            <p>点击下载压缩包到本地，解压后使用巨魔安装生效！<span style="color: red;">（证书签名方式无权限！）</span></p>
+   <p></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<div class="category-label" style="padding: 15px 15px; background-color: #008000; color: white; font-size: 22px; font-weight: bold; border-radius: 20px; margin-bottom: 0px; margin-top: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); text-align: left; width: fit-content;">自定义美化主题等</div>
+
+<a href="https://ipcc.lanzouj.com/s/cowabungalite" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/cowliteicon.png" alt="Person">
+        <div class="card-text">
+            <h3>CowabungaLite小奶牛<br><span style="color: blue;">iOS 14.0 - iOS 17.5.1</span></h3>
+            <p><span style="color: red;">特别注意：重启后，如果出现“数据恢复选项”，一定要选“不传输APP与数据”!<br>选错会导致所有数据丢失，谨慎操作！</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://www.123pan.com/s/ifH9-vki63" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/450dacf1-3b4c-476c-8d27-014b99541c0b.jpg" alt="Person">
+        <div class="card-text">
+            <h3>Cowabunga（美化主题）<br><span style="color: blue;">iOS 15.0 - 15.7.1 / iOS 16.0 - 16.1.2</span></h3>
+            <p>需要通过 trollstore 巨魔安装，才能使用<span style="color: green;">（ 内置多功能修改，其中包括主题美化和修改字体）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://www.123pan.com/s/ifH9-HSz63.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/272d93ed-7305-4dad-87c3-2682f133f1c3.jpg" alt="Person">
+        <div class="card-text">
+            <h3>Cluckabunga（kfd）<br><span style="color: blue;">iOS 16.2 - iOS 16.5 和 16.6 beta</span></h3>
+            <p>需要通过 trollstore 巨魔安装，才能使用<span style="color: green;">（ 多功能集合在一起,内置多功能修改，其中包括主题美化和修改字体）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://www.123pan.com/s/ifH9-JKi63.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/bbb98ea6-5b05-4da0-8eee-568c110399e8.png" alt="Person">
+        <div class="card-text">
+            <h3>Cowabunga Lite（美化主题）<br><span style="color: blue;">iOS 15.0 - iOS 18.x</span></h3>
+            <p>需要依赖电脑修改<span style="color: green;">（ 内置多功能修改，其中包括主题美化和修改字体）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://www.lanzouy.com/b0183kyob" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://aiweb.aifengkeji.com/chajian/3bea875c-2a19-4cd8-a9ee-7197bfef5fe6.jpeg" alt="Person">
+        <div class="card-text">
+            <h3>BlizzardBoard（美化主题）<br><span style="color: blue;">iOS 15.0 - iOS 15.4.1</span></h3>
+            <p>需要通过 trollstore 巨魔安装，才能使用<span style="color: green;">（ 可用美化桌面图标（有风险））</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://box.txsm.asia/jc/reddot.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://aiweb.aifengkeji.com/chajian/ef5409a0-e9a9-45ec-8ad7-890d1f9bc3b2.jpeg" alt="Person">
+        <div class="card-text">
+            <h3>reddot（改角标）<br><span style="color: blue;">iOS 15.0 - iOS 15.4.1</span></h3>
+            <p>需要通过 trollstore 安装<span style="color: green;">（ 可以修改图标角标颜色）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+
+<a href="https://ipcc.lanzouj.com/s/zhuxiao" download="一键注销.ipa" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/respring.jpg" alt="Person">
+        <div class="card-text">
+            <h3>一键注销<br><span style="color: blue;">iOS 14.0 - iOS 16.6.1 和 17.0</span></h3>
+            <p>点击下载压缩包到本地，解压后使用巨魔安装！<span style="color: green;">（支持证书签名安装！）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+
+<div class="category-label" style="padding: 15px 15px; background-color: #008000; color: white; font-size: 22px; font-weight: bold; border-radius: 20px; margin-bottom: 0px; margin-top: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); text-align: left; width: fit-content;">越狱工具/Cydia/Sileo</div>
+
+<a href="https://box.txsm.asia//jc/dopamine.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/aea5e02a-67eb-491c-91b4-09a6beb9d876.png" alt="Person">
+        <div class="card-text">
+            <h3>Dopamine（Roothide）
+<br><span style="color: blue;">iOS 15.0 - 16.5 / 15.0 - 16.5.1 / 15.0 - 16.6.1</span></h3>
+            <p>内置可选择 Sileo 和 Zebra 管理器<span style="color: green;">（ 支持插件注入及安装）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://box.txsm.asia//jc/dopamine.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://aiweb.aifengkeji.com/chajian/4143ee5d-afa5-44b2-a5ba-9b440e1de956.jpeg" alt="Person">
+        <div class="card-text">
+            <h3>Dopamine（A12-A16）
+<br><span style="color: blue;">iOS 15.0 - iOS 16.5 和 iOS 15.0 - iOS 16.5.1</span></h3>
+            <p>内置可选择 Sileo 和 Zebra 管理器<span style="color: green;">（ 支持插件注入及安装）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://www.123pan.com/s/ifH9-gjL63.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/5c4a593b-40b8-4798-baca-8a7cef88400a.jpg" alt="Person">
+        <div class="card-text">
+            <h3>Serotonin（注入应用）<br><span style="color: blue;">iOS 16.0 - iOS 16.6.1</span></h3>
+            <p>需要通过 trollstore 巨魔安装，才能使用<span style="color: green;">（ 支持插件注入及安装）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://www.123pan.com/s/ifH9-jiL63.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/f7a13ce7-ed1e-4035-9370-78f69aebb56b.jpg" alt="Person">
+        <div class="card-text">
+            <h3>Bootstrap（注入应用）<br><span style="color: blue;">iOS 14.0 - iOS 16.6.1 和 iOS 17.0</span></h3>
+            <p>需要通过 trollstore 巨魔安装，才能使用<span style="color: green;">（ 支持注入第三方应用）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://www.lanzouj.com/iExxl24ridqb" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://aiweb.aifengkeji.com/chajian/30d114b8-183f-4766-a9a2-8b5a074ba145.jpeg" alt="Person">
+        <div class="card-text">
+            <h3>Taurine（A9 - A14）<br><span style="color: blue;">支持 iOS 14.0 - 14.8.1 系统</span></h3>
+            <p>需要点击 KFD 利用才能生效<span style="color: green;">（ 支持注入第三方应用）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<div class="category-label" style="padding: 20px 30px; background-color: #008000; color: white; font-size: 22px; font-weight: bold; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); text-align: left; width: fit-content;">基础优化类</div>
+
+<a href="https://www.123pan.com/s/ifH9-zwq63.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/7c2211d6-7f72-43af-aa1b-922400e844bc.jpg" alt="Person">
+        <div class="card-text">
+            <h3>LiveContainer（内置安装）<br><span style="color: blue;">iOS 15.0 - iOS 17.x</span></h3>
+            <p>需要通过 trollstore 巨魔安装，才能使用<span style="color: green;">（ 需要利用 Sidestore 签名安装）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://ipcc.lanzouj.com/s/cbn" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/cbn.jpg" alt="Person">
+        <div class="card-text">
+            <h3>广电IPCC<br><span style="color: blue;">iOS 14.0 - iOS 17.5.1</span></h3>
+            <p>点击下载广电IPCC到电脑，然后使用爱思助手刷入！<span style="color: black;">（工具箱->更新IPCC文件）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://ipcc.lanzouj.com/s/apn" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/apn.jpg" alt="Person">
+        <div class="card-text">
+            <h3>APN资源包</h3>
+            <p>点击下载APN配置文件，并安装到设置！<span style="color: black;">（设置）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+
+<div class="category-label" style="padding: 20px 30px; background-color: #008000; color: white; font-size: 22px; font-weight: bold; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); text-align: left; width: fit-content;">签名工具及教程</div>
+
+<a href="https://box.txsm.asia/jc/aisi.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://d-image.i4.cn/i4web/static20212/img/nb_logo.png" alt="Person">
+        <div class="card-text">
+            <h3>爱思助手IPA签名教程</h3>
+            <p>可以使用证书签名或使用 Apple ID 签名后正常安装到设备。<span style="color: green;">（使用爱思助手就可以快速完成签名）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+
+<a href="https://box.txsm.asia/jc/niuwa.html" style="text-decoration: none; color: inherit;">
+<div class="content">
+    <div class="card">
+        <img src="https://aiweb.aifengkeji.com/chajian/f4539e82-3333-4371-b69d-fdc958c502c2.jpeg" alt="Person">
+        <div class="card-text">
+            <h3>牛蛙助手（自签）</h3>
+            <p>用于签名IPA安装的工具<span style="color: green;">（脱离电脑端 Apple ID 签名，牛蛙工具是永久不掉，自签IPA只有七天，优势不依赖电脑也能自签。）</span></p>
+        </div>
+    </div>
+</div>
+</a>
+<div class="category-label" style="padding: 15px 15px; background-color: #008000; color: white; font-size: 22px; font-weight: bold; border-radius: 20px; margin-bottom: 0px; margin-top: 20px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); text-align: left; width: fit-content;">官方公众号</div>
+
+<div class="content">
+    <div class="card"> 
+        <img src="https://yksv.cn/wp-content/uploads/2024/07/5993fdd654bc5d767d28a398ccdf8859.png" alt="Person">
+        <div class="card-text">
+            <h3>苹果实验室<br><span style="color: green;">微信公众号搜索苹果实验室获取更多资源！</span></h3>
+            <p>我这里所有分享都是免费，欢迎关注！<br>所有演示视频发布在下面的平台</p>
+        </div>
+        
+     </div>
+ <div class="navigation">
+  <a href="https://b23.tv/uGxOJSh">B站</a>
+  <a href="https://v.douyin.com/i6vhEAeX/ 3@4.com">抖音</a>
+  <a href="https://www.xiaohongshu.com/user/profile/62c3ebbf00000000190297de">小红书</a>
+  <a href="https://v.kuaishou.com/HMcY1m">快手</a>
+  <a href="https://weibo.cn/qr/userinfo?uid=7722702568">微博</a>
+ </div>
+</div>
+<!--开站时间开始-->       
+<center>
+<br />
+<div style="background-color: #eee;width: 400px;border-radius: 20px;">
+<script type="text/javascript">
+    function show_runtime() {
+        window.setTimeout("show_runtime()", 1000);
+        X = new Date("6/14/2023 10:28:00");
+        Y = new Date();
+        T = (Y.getTime() - X.getTime());
+        M = 24 * 60 * 60 * 1000;
+        a = T / M;
+        A = Math.floor(a);
+        b = (a - A) * 24;
+        B = Math.floor(b);
+        c = (b - B) * 60;
+        C = Math.floor((b - B) * 60);
+        D = Math.floor((c - C) * 60);
+        runtime_span.innerHTML = "本站已运行 " + A + "天" + B + "小时" + C + "分" + D + "秒"
+    }
+    show_runtime();
+</script>
+<!-- 访问量 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<br />
+本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+<span id="runtime_span"></span>
+</div>
+
+ <style>
+    #busuanzi_value_site_pv {
+      font-size: 18px;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    #runtime_span {
+      font-size: 16px;
+      color: #6c757d;
+    }
+  </style>
